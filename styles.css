@@ -1,0 +1,183 @@
+:root {
+    --color1: #002227;
+    --color2: #005077;
+    --color3: #00baff;
+    --color4: #00fbf3;
+    --color5: #aeffee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-width: 385px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: var(--color2);
+    width: 100%;
+    padding: 1rem 0;
+}
+
+#navbar ul {
+    display: flex;
+    max-width: 80%; 
+}
+
+#navbar ul li {
+    margin: 0 1rem;
+}
+
+#navbar a {
+    font-size: 3rem;
+    color: var(--color5);
+    
+}
+
+#navbar a:hover {
+    color: var(--color1);
+}
+
+#welcome-section {
+    height: 100vh;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: var(--color5);
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+    color: var(--color1);
+}
+
+p {
+    font-size: 2rem;
+}
+
+#welcome-section p{
+    color: var(--color2);
+    font-size: 3rem;
+    background-color: white;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+    animation: rotate 2s linear 0ms 1;
+}
+
+#projects {
+    background-color: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+#projects a {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#projects a p {
+    color: var(--color5);
+    padding: 1rem 0;
+    background-color: var(--color1);
+    width: 100%;
+    text-align: center;
+}
+
+#projects h2 {
+    animation: color-change 5s ease-in-out 0ms infinite;
+}
+
+img {
+    max-width: 100%;
+    width: 55rem;
+    height: 35rem;
+    overflow: hidden;
+}
+
+#contact-section {
+    height: 90vh;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.contact-header {
+    padding-bottom: 2rem;
+}
+
+.contact-header h2, p {
+    color: var(--color5);
+}
+
+#contact-section a {
+    font-size: 3rem;
+    color: var(--color5);
+    margin: 0 1rem;
+}
+
+footer {
+    height: 10vh;
+    background-color: var(--color1);
+    border-top: 0.5rem solid var(--color4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: var(--color5);
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-change {
+    0%{
+        color: var(--color1);
+    }
+    50%{
+        color: var(--color5);
+    }
+}
+
+@media (max-width: 520px) {
+    #navbar {
+        justify-content: center;
+    }
+}
